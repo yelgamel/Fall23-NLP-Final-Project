@@ -1,11 +1,16 @@
 # NLP Final Project Part 1
 ### 1.	Project Title:
+
 ### 2.	Team Names: Group 5 - Carl Cruzan, Maciel Lopez, and Yasmin Elgamel
+
 ### 3.	Project Description
 
-•	Objectives: State as clearly as possible what you want to do. What problem do you solve etc?
 
-•	Usefulness: State as clearly as possible why your chosen application is useful. Make sure to answer the following questions: Are there any similar or equivalent applications out here?  If so, what are they and how is yours different? Which user group/stakeholders is your application targeting?
+•	Objectives: 
+State as clearly as possible what you want to do. What problem do you solve etc?
+
+•	Usefulness: 
+State as clearly as possible why your chosen application is useful. Make sure to answer the following questions: Are there any similar or equivalent applications out here?  If so, what are they and how is yours different? Which user group/stakeholders is your application targeting?
 
 •	Data:
 
