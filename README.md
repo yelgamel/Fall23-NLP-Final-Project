@@ -53,7 +53,7 @@ Describe tentatively what tasks your application will perform. There are two typ
 #### •	Communication and Sharing:
 
 
-        • Communication method: Zoom, Canvas, Piazza
+        • Communication method: Teams, Canvas, Piazza
       
         • Github repository link for the project: https://github.com/yelgamel/Fall23-NLP-Final-Project
       
