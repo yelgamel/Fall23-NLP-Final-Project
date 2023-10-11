@@ -47,7 +47,7 @@ Set up your preferred communication methods (zoom, teams, discord ...) and provi
 
       •	Communication method: Zoom, Canvas, Piazza
       
-      •	Github repository link for the project:
+      •	Github repository link for the project: https://github.com/yelgamel/Fall23-NLP-Final-Project
       
       •	create a Read.me file with the initial project description
       
