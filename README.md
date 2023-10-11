@@ -1,5 +1,6 @@
 # NLP Final Project Part 1
-### 1.	Project Title:
+
+### 1.	Project Title: ........
 
 ### 2.	Team Names: Group 5 - Carl Cruzan, Maciel Lopez, and Yasmin Elgamel
 
@@ -57,12 +58,12 @@ Describe tentatively what tasks your application will perform. There are two typ
         • Github repository link for the project: https://github.com/yelgamel/Fall23-NLP-Final-Project
       
         • upload dataset (I WILL DELETE THIS LINE ONCE THE DATA IS UPLOADED)
-      
-      
-### 4.	Personal Contribution Statement
 
-        • Team Project: What was your contribution during the Planning stage (Part 1)
-        • Individual Project: Reflect on how you will manage time/tasks to complete milestones
+
+
+
+
+
 
 
 
