@@ -6,17 +6,17 @@
 ### 3.	Project Description
 
 
-•	Objectives: 
+#### •	Objectives: 
 
 State as clearly as possible what you want to do. What problem do you solve etc?
 
-•	Usefulness: 
+#### •	Usefulness: 
 
 State as clearly as possible why your chosen application is useful. Make sure to answer the following questions: Are there any similar or equivalent applications out here?  If so, what are they and how is yours different? Which user group/stakeholders is your application targeting?
 
 
 
-•	Data:
+#### •	Data:
 
     • Describe dataset origin (who collected, when, and for what purpose).
     Do not use data without any information provided.
@@ -32,14 +32,18 @@ State as clearly as possible why your chosen application is useful. Make sure to
         
           •	What type of cleaning does it require?
       
-•	Functionalities: Describe tentatively what tasks your application will perform. There are two types of functions you would need to offer:
+#### •	Functionalities:
+
+Describe tentatively what tasks your application will perform. There are two types of functions you would need to offer:
 
       •	NLP Functions: specific to your NLP tasks
       
       •	User Interaction:  For example, allowing users to select/filter/search
       
       
-•	Communication and Sharing: Set up your preferred communication methods (zoom, teams, discord ...) and provide a Github repository link for the project:
+#### •	Communication and Sharing:
+
+Set up your preferred communication methods (zoom, teams, discord ...) and provide a Github repository link for the project:
 
       •	Communication method: Zoom, Canvas, Piazza
       
