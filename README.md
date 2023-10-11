@@ -26,13 +26,13 @@ Make sure to answer the following questions:
 
 #### •	Data:
 
-    • Describe dataset origin (who collected, when, and for what purpose).
+    • Describe dataset origin (who collected, when, and for what purpose):
         Do not use data without any information provided.
         Do not use text-preprocessed clean data. What is data format: csv, json
     
-    • Provide initial data description. 
+    • Provide initial data description: 
           • Besides a text field, what other information do you have
-          (for example, review data -> location, stars, users; twitter data -> user, likes;...)
+              (for example, review data -> location, stars, users; twitter data -> user, likes;...)
       
           •	do you have labeled data?
       
@@ -44,24 +44,27 @@ Make sure to answer the following questions:
 
 Describe tentatively what tasks your application will perform. There are two types of functions you would need to offer:
 
-      •	NLP Functions: specific to your NLP tasks
+        • NLP Functions: specific to your NLP tasks
       
-      •	User Interaction:  For example, allowing users to select/filter/search
+        • User Interaction: For example, allowing users to select/filter/search 
       
       
 #### •	Communication and Sharing:
 
-Set up your preferred communication methods (zoom, teams, discord ...) and provide a Github repository link for the project:
 
-      •	Communication method: Zoom, Canvas, Piazza
+        • Communication method: Zoom, Canvas, Piazza
       
-      •	Github repository link for the project: https://github.com/yelgamel/Fall23-NLP-Final-Project
+        • Github repository link for the project: https://github.com/yelgamel/Fall23-NLP-Final-Project
       
-      •	create a Read.me file with the initial project description
-      
-      •	upload dataset
+        • upload dataset (I WILL DELETE THIS LINE ONCE THE DATA IS UPLOADED)
       
       
 ### 4.	Personal Contribution Statement
-      •	Team Project: What was your contribution during the Planning stage (Part 1)
-      •	Individual Project: Reflect on how you will manage time/tasks to complete milestones
+
+        • Team Project: What was your contribution during the Planning stage (Part 1)
+        • Individual Project: Reflect on how you will manage time/tasks to complete milestones
+
+
+
+
+
