@@ -60,6 +60,43 @@ Describe tentatively what tasks your application will perform. There are two typ
         • upload dataset (I WILL DELETE THIS LINE ONCE THE DATA IS UPLOADED)
 
 
+### 4. Personal Contribution Statement:
+This part will be completed by each team member as part of the proposal and submitted on Canvas.
+
+--------------------------------------------------------------------------------------------------
+
+
+# Group 5 - Team Notes:
+### This section is to include all the notes, updates, and edits made on Github and the project.
+### So, whenever you make changes please make a record of it here. Thanks, Yasmin Elgamel
+
+### 10/12/2023:
+- Meeting on Teams @ 7PM MT / 9PM EST
+- Yasmin created Github repository and sent invites to Maciel and Carl
+
+### 10/13/2023: Note from Yasmin Elgamel:
+- Today I created 2 folders on Github: Final Project folder and Testing Phase folder.
+- In the Testing Phase folder I created and  included: "SentimentAnalyzerWebApp.py, index.html, and result.html".
+- The app clean, tokenize, lemmatize, and find the polarity of the text entered by the user.
+- To try the Flask app in the Testing Phase folder:
+    1- From the Testing Phase folder, download index.html and result.html and put them in a folder called "templates". 
+    2- Download TestingSentimentAnalyzerWebApp.py. 
+    3- Make sure the "templates" folder, and .py file saved in the same area. 
+    4- Run the .py file. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
