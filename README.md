@@ -70,7 +70,7 @@ This part will be completed by each team member as part of the proposal and subm
 ### This section is to include all the notes, updates, and edits made on Github and the project.
 ### So, whenever you make changes please make a record of it here. Thanks, Yasmin Elgamel
 
-### 10/12/2023:
+### 10/12/2023: Note from Yasmin Elgamel:
 - Meeting on Teams @ 7PM MT / 9PM EST
 - Yasmin created Github repository and sent invites to Maciel and Carl
 - Yasmin created and sent invites for the next Teams meeting on 10/19/2023 @ 5PM MT / 7PM EST
