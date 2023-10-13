@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sentiment Analysis Results</title>
+  <style>
+    /* Add CSS styles to center the content */
+    .result-container {
+      width: 600px;
+      margin: 0 auto;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="result-container">
+    <h1>Sentiment Analysis Results</h1>
+    <p>Text After Cleaning: {{ analysis['text'] }}</p>
+    <p>Sentiment: {{ analysis['sentiment'] }}</p>
+    <p>Polarity: {{ analysis['polarity'] }}</p>
+  </div>
+</body>
+</html>
