@@ -44,7 +44,7 @@ def analyze_sentiment(txt):
     txt = txt.strip()
     tokens = wpt.tokenize(txt)
 
-    # Remove stopwords
+    # remove stopwords
     stop_words = set(stopwords.words('english'))
 
     # remove stopwords
@@ -52,15 +52,15 @@ def analyze_sentiment(txt):
                        if token not in stop_words
                        and token not in list(string.punctuation)]
 
-    # Initialize WordNetlemmatizer and lemmatize
+    # initialize WordNetlemmatizer and lemmatize
     lemmatizer = WordNetLemmatizer()
     lemmatized_tokens = " ".join([lemmatizer.lemmatize(token)
                                   for token in filtered_tokens])
 
     # join lemmatized tokens
-    preprocessed_text = "".join(lemmatized_tokens)
+    cleaned_text = "".join(lemmatized_tokens)
 
-    # Initialize VADER sentiment analyzer
+    # initialize VADER sentiment analyzer
     sia = SentimentIntensityAnalyzer()
 
     # find sentiment using VADER
@@ -79,7 +79,7 @@ def analyze_sentiment(txt):
     else:
         sentiment = 'Neutral'
 
-    return {'text': preprocessed_text, 'sentiment': sentiment,
+    return {'text': cleaned_text, 'sentiment': sentiment,
             'polarity': polarity}
 
 
