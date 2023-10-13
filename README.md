@@ -71,7 +71,7 @@ This part will be completed by each team member as part of the proposal and subm
 ### So, whenever you make changes please make a record of it here. Thanks, Yasmin Elgamel
 
 ### 10/12/2023: Note from Yasmin Elgamel:
-- Meeting on Teams @ 7PM MT / 9PM EST
+- Group 5 members met on Teams @ 7PM MT / 9PM EST
 - I Created Github repository and sent invites to Maciel and Carl
 - I Created and sent invites for the next Teams meeting on 10/19/2023 @ 5PM MT / 7PM EST
 - Link to the next meeting, 10/19/2023 @ 5PM MT / 7PM EST: https://teams.microsoft.com/l/meetup-join/19%3ameeting_YjgwNGM1MjQtYTdjNi00NDhjLWI1NTItMDdkNTEwZTY2Njgz%40thread.v2/0?context=%7b%22Tid%22%3a%221113be34-aed1-4d00-ab4b-cdd02510be91%22%2c%22Oid%22%3a%220796ac8e-9df5-429e-aeb0-df31f53b6f97%22%7d 
