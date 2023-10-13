@@ -78,7 +78,7 @@ This part will be completed by each team member as part of the proposal and subm
 
 ### 10/13/2023: Note from Yasmin Elgamel:
 - Today I created 2 folders on Github: Final Project folder and Testing Phase folder.
-- In the Testing Phase folder I created the following as a reference for the Final Project: SentimentAnalyzerWebApp.py, index.html, and result.html
+- In the Testing Phase folder, I created the following as a reference for the Final Project: SentimentAnalyzerWebApp.py, index.html, and result.html
 - The app clean, tokenize, lemmatize, and find the polarity of the text entered by the user.
 - To try the Flask app in the Testing Phase folder:
     1- From the Testing Phase folder, download index.html and result.html and put them in a folder called "templates". 
