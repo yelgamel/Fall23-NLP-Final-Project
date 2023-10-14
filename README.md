@@ -53,11 +53,11 @@ Describe tentatively what tasks your application will perform. There are two typ
 #### •	Communication and Sharing:
 
 
-        • Communication method: Teams, Canvas, Piazza
+        • Communication method: Group 5 is communicating via Teams, Canvas, and Piazza.
       
         • Github repository link for the project: https://github.com/yelgamel/Fall23-NLP-Final-Project
       
-        • upload dataset (I WILL DELETE THIS LINE ONCE THE DATA IS UPLOADED)
+        • Upload dataset: (I WILL DELETE THIS LINE ONCE THE DATA IS UPLOADED)
 
 
 ### 4. Personal Contribution Statement:
