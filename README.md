@@ -84,7 +84,10 @@ This part will be completed by each team member as part of the proposal and subm
     1- From the Testing Phase folder, download index.html and result.html and put them in a folder called "templates". 
     2- Download TestingSentimentAnalyzerWebApp.py. 
     3- Make sure the "templates" folder, and .py file saved in the same area. 
-    4- Run the .py file. 
+    4- Run the .py file.
+
+### 10/14/2023: Note from Yasmin Elgamel:
+- I completed "Team Names", and the "Communication and Sharing" portion under "Project Description", just waiting for the dataset to upload it.
 
 
 
