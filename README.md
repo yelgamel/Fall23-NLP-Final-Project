@@ -1,6 +1,6 @@
 # Group 5 - NLP Final Project Part 1
 
-### 1.	Project Title:          ............................
+### 1.	Project Title: .......................................................
 
 ### 2.	Team Names: Group 5 - Carl Cruzan, Maciel Lopez, and Yasmin Elgamel
 
