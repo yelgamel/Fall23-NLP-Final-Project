@@ -1,4 +1,4 @@
-# NLP Final Project Part 1
+# Group 5 - NLP Final Project Part 1
 
 ### 1.	Project Title:          ............................
 
