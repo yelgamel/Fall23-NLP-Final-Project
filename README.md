@@ -9,13 +9,13 @@
 
 #### •	Objectives: 
 
-State as clearly as possible what you want to do. What problem do you solve etc?
+- State as clearly as possible what you want to do. What problem do you solve etc?
 
 #### •	Usefulness: 
 
-State as clearly as possible why your chosen application is useful.
+1- State as clearly as possible why your chosen application is useful.
 
-Make sure to answer the following questions:
+2- Make sure to answer the following questions:
 - Are there any similar or equivalent applications out here? 
 - If so, what are they and how is yours different?
 - Which user group/stakeholders is your application targeting?
@@ -24,9 +24,11 @@ Make sure to answer the following questions:
 
 #### •	Data:
 
-- Describe dataset origin (who collected, when, and for what purpose): Do not use data without any information provided. Do not use text-preprocessed clean data.
-- What is data format: csv, json?
-- Provide initial data description:
+1- Describe dataset origin (who collected, when, and for what purpose): Do not use data without any information provided. Do not use text-preprocessed clean data.
+
+2- What is data format: csv, json?
+
+3- Provide initial data description:
 - Besides a text field, what other information do you have
   (for example, review data -> location, stars, users; twitter data -> user, likes;...)
 - Do you have labeled data?
