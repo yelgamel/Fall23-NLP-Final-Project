@@ -51,11 +51,13 @@ Describe tentatively what tasks your application will perform. There are two typ
 - This part will be completed by each team member as part of the proposal and submitted on Canvas.
 
 --------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
 
 
 # Group 5 - Team Notes:
-### This section is to include all the notes, updates, and edits made on Github and the project.
-### So, whenever you make changes please make a record of it here. Thanks, Yasmin Elgamel
+### This section is to include all the notes, updates, and edits made on Github and the project. So, whenever you make changes please make a record of it here. Thanks, Yasmin Elgamel
+
+----------------------------------------------------------------
 
 ### 10/12/2023: Note from Yasmin Elgamel:
 - Group 5 members met on Teams @ 7PM MT / 9PM EST
