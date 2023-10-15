@@ -8,17 +8,22 @@
 
 
 #### •	Objectives: 
+State as clearly as possible what you want to do. What problem do you solve etc?
 
-- State as clearly as possible what you want to do. What problem do you solve etc?
+- The team will create a web application that will allow the user to enter a title of a movie that they like, and receive a recommendation for ten movies that are similar to their interests.
+- We will use NLP features to tokenize, lemmatize, and remove stop words. Then, cosine similarity will be added in order to find similar movies that will match the user’s interest and preference.
+
 
 #### •	Usefulness: 
+State as clearly as possible why your chosen application is useful.
+Make sure to answer the following questions: Are there any similar or equivalent applications out here? 
+If so, what are they and how is yours different? Which user group/stakeholders is your application targeting?
 
-1- State as clearly as possible why your chosen application is useful.
-
-2- Make sure to answer the following questions:
-- Are there any similar or equivalent applications out here? 
-- If so, what are they and how is yours different?
-- Which user group/stakeholders is your application targeting?
+- This application will be useful for companies like Netflix, Amazon, Disney, and all television studios. It will help businesses understand the user’s interest and tailor their products based on their customers’ needs. This will help them increase profit and productivity.
+- This application can also be helpful in theatres, so customers can find out if the new movie will match their preference before buying a ticket.
+- In addition, from the user’s side, this application will be helpful and save lots of time for the user. They can easily and quickly find movies similar to what they like. It will also save them money, because users will buy movies they know they will enjoy.
+- Netflix uses movie recommendation system; however, they use the user’s watch history to recommend movies. Our movie recommendation system is different, because it allows the customer to enter a title of a movie they like. Personally, I believe that using the watch history is not always effective, because most of the time I would start watching a movie and after twenty minutes I decide that I don’t like it. Then, Netflix fills the front page of my account with movies similar to the one I disliked. It is always effective to ask the person directly about what they like to achieve the most accurate movie recommendation system.
+- Our application is targeting anyone who enjoys watching movies, and all businesses that provide the create and/or sells movies.
 
 
 
