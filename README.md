@@ -1,6 +1,6 @@
-# Group 5 - NLP Final Project Part 1
+# Group 5 - NLP Final Project Part 1 - The Proposal
 
-### 1.	Project Title: Movie Recommendation System
+### 1.	Project Title: Movie Recommendation Web Application
 
 ### 2.	Team Names: Group 5 - Carl Cruzan, Maciel Lopez, and Yasmin Elgamel
 
@@ -10,7 +10,7 @@
 #### •	Objectives: 
 State as clearly as possible what you want to do. What problem do you solve etc?
 
-- The team will create a web application that will allow the user to enter a title of a movie that they like, and receive a recommendation for ten movies that are similar to their interests.
+- The team will create a web application that will allow the user to enter a title of a movie that they like, and receive a recommendation for thirty movies that are similar to their interests.
 - We will use NLP features to tokenize, lemmatize, and remove stop words. Then, cosine similarity will be added in order to find similar movies that will match the user’s interest and preference.
 
 
