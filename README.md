@@ -10,8 +10,10 @@
 #### •	Objectives: 
 State as clearly as possible what you want to do. What problem do you solve etc?
 
-- The team will create a web application that will allow the user to enter a title of a movie that they like, and receive a recommendation for thirty movies that are similar to their interests.
-- We will use NLP features to tokenize, lemmatize, and remove stop words. Then, cosine similarity will be added in order to find similar movies that will match the user’s interest and preference.
+- The team will create a web application using Flask that will allow the user to enter a title of a movie that they like, and receive a recommendation for thirty movies that are similar to their interest.
+- If the user enters a title that is not in the database, the web application will display a message asking the user to enter the correct movie title.
+- If the database has close matches to the user’s input, the web application will suggest a title with a closer match to the user’s input, and display recommendation for thirty movies.
+- We will use NLP features to lower characters, remove special characters and whitespaces, tokenize, and remove stop words. Then, cosine similarity will be added in order to find similar movies that will match the user’s interest and preference.
 
 
 #### •	Usefulness: 
@@ -82,10 +84,8 @@ Describe tentatively what tasks your application will perform. There are two typ
     3- Make sure the "templates" folder, and .py file saved in the same area. 
     4- Run the .py file.
 
-### 10/14/2023: Note from Yasmin Elgamel:
-- I completed "Team Names", and the "Communication and Sharing" portion under "Project Description", just waiting for the dataset to upload it.
-
-
+### 10/16/2023: Note from Yasmin Elgamel:
+- I completed the following topics in this proposal: Project Title, Team Names; and under Project Description, I completed Objectives, Usefulness, and Communication and Sharing portions.
 
 
 
