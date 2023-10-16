@@ -1,4 +1,4 @@
-# Group 5 - NLP Final Project Part 1 - The Proposal
+# Group 5 - NLP Final Project
 
 ### 1.	Project Title: Movie Recommendation Web Application
 
