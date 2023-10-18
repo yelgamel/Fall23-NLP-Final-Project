@@ -85,7 +85,7 @@ Describe tentatively what tasks your application will perform. There are two typ
     4- Run the .py file.
 
 ### 10/16/2023: Note from Yasmin Elgamel:
-- I completed the following topics in this proposal: Project Title, Team Names; and under Project Description, I completed Objectives, Usefulness, and Communication and Sharing portions.
+- I completed the following topics in this proposal: "Project Title", "Team Names"; and under "Project Description", I completed "Objectives", "Usefulness", and "Communication and Sharing" portions.
 
 
 
