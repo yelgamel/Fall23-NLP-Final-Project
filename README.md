@@ -7,7 +7,7 @@
 ### 3.	Project Description
 
 
-#### •	Objectives: 
+#### •	Objectives: -- (Completed by Yasmin Elgamel)
 State as clearly as possible what you want to do. What problem do you solve etc?
 
 - The team will create a web application using Flask that will allow the user to enter a title of a movie that they like, and receive a recommendation for ten movies that are similar to their interest.
@@ -16,7 +16,7 @@ State as clearly as possible what you want to do. What problem do you solve etc?
 - We will use NLP features to lower characters, remove special characters and whitespaces, tokenize, and remove stop words. Then, cosine similarity will be added in order to find similar movies that will match the user’s interest and preference.
 
 
-#### •	Usefulness: 
+#### •	Usefulness: -- (Completed by Yasmin Elgamel)
 State as clearly as possible why your chosen application is useful.
 Make sure to answer the following questions: Are there any similar or equivalent applications out here? 
 If so, what are they and how is yours different? Which user group/stakeholders is your application targeting?
@@ -49,14 +49,14 @@ Describe tentatively what tasks your application will perform. There are two typ
 - User Interaction: For example, allowing users to select/filter/search 
       
       
-#### •	Communication and Sharing:
+#### •	Communication and Sharing: -- (Completed by Yasmin Elgamel)
 
 - Communication method: Group 5 is communicating via Teams, Canvas, and Piazza.
 - Github repository link for the project: https://github.com/yelgamel/Fall23-NLP-Final-Project
 - Upload dataset: (I WILL DELETE THIS LINE ONCE THE DATA IS UPLOADED)
 
 
-### 4. Personal Contribution Statement:
+### 4. Personal Contribution Statement: -- (Completed by Yasmin Elgamel)
 - This part will be completed by each team member as part of the proposal and submitted on Canvas.
 
 --------------------------------------------------------------------------------------------------
