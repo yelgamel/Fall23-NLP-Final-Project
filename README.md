@@ -25,7 +25,7 @@ If so, what are they and how is yours different? Which user group/stakeholders i
 - This application can also be helpful in theatres, so customers can find out if the new movie will match their preference before buying a ticket.
 - In addition, from the user’s side, this application will be helpful and save lots of time for the user. They can easily and quickly find movies similar to what they like. It will also save them money, because users will buy movies they know they will enjoy.
 - Netflix uses movie recommendation system; however, they use the user’s watch history to recommend movies. Our movie recommendation system is different, because it allows the customer to enter a title of a movie they like. Personally, I believe that using the watch history is not always effective, because most of the time I would start watching a movie and after twenty minutes I decide that I don’t like it. Then, Netflix fills the front page of my account with movies similar to the one I disliked. It is always effective to ask the person directly about what they like to achieve the most accurate movie recommendation system.
-- Our application is targeting anyone who enjoys watching movies, and all businesses that provide the create and/or sells movies.
+- Our application is targeting anyone who enjoys watching movies, and all businesses that create and/or sell movies.
 
 
 
