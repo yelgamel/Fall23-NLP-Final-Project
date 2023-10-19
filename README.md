@@ -56,7 +56,7 @@ Describe tentatively what tasks your application will perform. There are two typ
 - Upload dataset: (Waiting for Carl and Maciel to provide the dataset)
 
 
-### 4. Personal Contribution Statement: 
+### 4. Personal Contribution Statement: -- (Each team member will complete this part separately)
 - This part will be completed by each team member as part of the proposal and submitted on Canvas.
 
 --------------------------------------------------------------------------------------------------
