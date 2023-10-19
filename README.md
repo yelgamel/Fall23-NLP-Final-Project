@@ -7,7 +7,7 @@
 ### 3.	Project Description
 
 
-#### •	Objectives: -- (Completed by Yasmin Elgamel)
+#### •	Objectives: ---- (Completed by Yasmin Elgamel)
 State as clearly as possible what you want to do. What problem do you solve etc?
 
 - The team will create a web application using Flask that will allow the user to enter a title of a movie that they like, and receive a recommendation for ten movies that are similar to their interest.
@@ -16,7 +16,7 @@ State as clearly as possible what you want to do. What problem do you solve etc?
 - We will use NLP features to lower characters, remove special characters and whitespaces, tokenize, and remove stop words. Then, cosine similarity will be added in order to find similar movies that will match the user’s interest and preference.
 
 
-#### •	Usefulness: -- (Completed by Yasmin Elgamel)
+#### •	Usefulness: ---- (Completed by Yasmin Elgamel)
 State as clearly as possible why your chosen application is useful.
 Make sure to answer the following questions: Are there any similar or equivalent applications out here? 
 If so, what are they and how is yours different? Which user group/stakeholders is your application targeting?
@@ -29,7 +29,7 @@ If so, what are they and how is yours different? Which user group/stakeholders i
 
 
 
-#### •	Data: -- (Completed by Carl Cruzan) --
+#### •	Data: ---- (Completed by Carl Cruzan)
 
 1- Describe dataset origin (who collected, when, and for what purpose): Do not use data without any information provided. Do not use text-preprocessed clean data.
 
@@ -42,21 +42,21 @@ If so, what are they and how is yours different? Which user group/stakeholders i
 - #records, #fields (columns if available), #NA values
 - What type of cleaning does it require?
       
-#### •	Functionalities: -- (Completed by Maciel Lopez) --
+#### •	Functionalities: ---- (Completed by Maciel Lopez)
 
 Describe tentatively what tasks your application will perform. There are two types of functions you would need to offer:
 - NLP Functions: specific to your NLP tasks
 - User Interaction: For example, allowing users to select/filter/search 
       
       
-#### •	Communication and Sharing: -- (Completed by Yasmin Elgamel)
+#### •	Communication and Sharing: ---- (Completed by Yasmin Elgamel)
 
 - Communication method: Group 5 is communicating via Teams, Canvas, and Piazza.
 - Github repository link for the project: https://github.com/yelgamel/Fall23-NLP-Final-Project
 - Upload dataset: (Waiting for Carl and Maciel to provide the dataset)
 
 
-### 4. Personal Contribution Statement: -- (Each team member will complete this part separately)
+### 4. Personal Contribution Statement: ---- (Each team member will complete this part separately)
 - This part will be completed by each team member as part of the proposal and submitted on Canvas.
 
 --------------------------------------------------------------------------------------------------
