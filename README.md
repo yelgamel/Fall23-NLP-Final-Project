@@ -29,7 +29,7 @@ If so, what are they and how is yours different? Which user group/stakeholders i
 
 
 
-#### •	Data: -- (Carl, please complete this portion, and follow up with Maciel regarding the data. Thanks! Yasmin.) --
+#### •	Data: -- (Completed by Carl Cruzan) --
 
 1- Describe dataset origin (who collected, when, and for what purpose): Do not use data without any information provided. Do not use text-preprocessed clean data.
 
@@ -42,7 +42,7 @@ If so, what are they and how is yours different? Which user group/stakeholders i
 - #records, #fields (columns if available), #NA values
 - What type of cleaning does it require?
       
-#### •	Functionalities: -- (Maciel, please complete this portion and collaborate with Carl, so he can complete the "Data" portion of this proposal. Thanks! Yasmin) --
+#### •	Functionalities: -- (Completed by Maciel Lopez) --
 
 Describe tentatively what tasks your application will perform. There are two types of functions you would need to offer:
 - NLP Functions: specific to your NLP tasks
