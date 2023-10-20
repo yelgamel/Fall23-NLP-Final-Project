@@ -43,15 +43,12 @@ Movies File:  1000 records x 16 columns:  Ranking of movie, Movie name, Year, Ce
 
 TV Series File:  1000 records x 13 columns:  Ranking of series, Series name, Year, Certificate(170), Runtime(25), Genre,	Rating(450), **DETAILS ABOUT SERIES(8)**, Actor 1(2),	Actor 2(2), Actor 3(6),	Actor 4(7), Votes
 
-Video Game File:  250 records x 12 columns:  Video game name,	Year,	Genre, Rating, **DETAILS ABOUT GAME**, Director, Actor 1,	Actor 2, Actor 3,	Actor 4, Votes, Certificate
+Video Game File:  250 records x 13 columns:  Ranking of video game, Video game name,	Year,	Genre(1), Rating(1), **DETAILS ABOUT GAME**, Director(3), Actor 1(20),	Actor 2(24), Actor 3(31),	Actor 4(72), Votes, Certificate(40)
 
+Other than the blank fields, the data looks generally in good shape.  Formatting in the "year" columns seems to be inconsistent and often contains text other than just the year.  Words/names with non-English punctuation generally have issues that may need to be addressed (e.g. PokÃ©mon and ShÃ´tarÃ´ Morikubo).  
 
+For some of the blank fields, we may fill using other information:  for example, TV Series Rating could be filled by looking at shows with similar rankings.  Others may have the whole record excluded (the 8 TV Series without any description).  Still other blanks may be ignored, such as video games without an actor.
 
-- Besides a text field, what other information do you have
-  (for example, review data -> location, stars, users; twitter data -> user, likes;...)
-- Do you have labeled data?
-- #records, #fields (columns if available), #NA values
-- What type of cleaning does it require?
       
 #### •	Functionalities: ---- (Completed by Maciel Lopez)
 
