@@ -1,6 +1,6 @@
 openapi: 3.0.3
 info:
-  title: Recommendation Engine
+  title: Entertainment Recommendation Engine
   description: |-
     Example description.
   version: 1.0.0
@@ -22,7 +22,7 @@ paths:
       responses:
         '200':
           description: Successful operation
-  /categories:
+  /data:
     get:
       tags:
         - user
