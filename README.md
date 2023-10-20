@@ -61,7 +61,7 @@ Describe tentatively what tasks your application will perform. There are two typ
 
 - Communication method: Group 5 is communicating via Teams, Canvas, and Piazza.
 - Github repository link for the project: https://github.com/yelgamel/Fall23-NLP-Final-Project
-- Upload dataset: (Waiting for Carl and Maciel to provide the dataset)
+- Upload dataset: Data has been uploaded to Github by Carl Cruzan
 
 
 ### 4. Personal Contribution Statement: ---- (Each team member will complete this part separately)
