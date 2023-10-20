@@ -31,9 +31,11 @@ If so, what are they and how is yours different? Which user group/stakeholders i
 
 #### •	Data: ---- (Completed by Carl Cruzan)
 
-1- Describe dataset origin (who collected, when, and for what purpose): Do not use data without any information provided. Do not use text-preprocessed clean data.
+1- Describe dataset origin (who collected, when, and for what purpose): https://www.kaggle.com/datasets/ramjasmaurya/top-250s-in-imdb/data?select=imdb+%281000+tv+series%29+-+%28june+2022%29.csv
 
-2- What is data format: csv, json?
+We are using a dataset from Kaggle encompassing the 1000 top-rated movies, 1000 top-rated TV series and 250 top-rated video games.  The dataset was pulled from IMDb as of June 2022.  The purpose of the dataset is for general use by those who have an interest in the topic and/or those interested in creating a project with the data.   
+
+2- What is data format: csv, json?  The data is in three .csv files (one each for movies, TV series, and video games).
 
 3- Provide initial data description:
 - Besides a text field, what other information do you have
