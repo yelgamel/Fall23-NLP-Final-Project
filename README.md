@@ -33,11 +33,11 @@ If so, what are they and how is yours different? Which user group/stakeholders i
 
 1- Describe dataset origin (who collected, when, and for what purpose): https://www.kaggle.com/datasets/ramjasmaurya/top-250s-in-imdb/data?select=imdb+%281000+tv+series%29+-+%28june+2022%29.csv
 
-We are using a dataset from Kaggle encompassing the 1000 top-rated movies, 1000 top-rated TV series and 250 top-rated video games.  The dataset was pulled from IMDb as of June 2022.  The purpose of the dataset is for general use by those who have an interest in the topic and/or those interested in creating a project with the data.   
+We are using a dataset from Kaggle encompassing the 1000 top-rated movies, 1000 top-rated TV series and 250 top-rated video games.  The dataset was pulled from IMDb as of June 2022 by Ram Jas.  The purpose of the dataset is for general use by those who have an interest in the topic and/or those interested in creating a project with the data.   
 
-2- What is data format: csv, json?  The data is in three .csv files (one each for movies, TV series, and video games).
+2- The data is in three .csv files (one each for movies, TV series, and video games).
 
-3- Provide initial data description:  **NOTE THAT THE TEXT FIELD FOR NLP IS IN BOLD** (and the number of blank fields, if any, are in parentheses)
+3- The three files are desribed below:  **NOTE THAT THE TEXT FIELD FOR NLP IS IN BOLD** (and the number of blank fields, if any, are in parentheses)
 
 Movies File:  1000 records x 16 columns:  Ranking of movie, Movie name, Year, Certificate(5), Runtime, Genre, Rating, Metascore(163), **DETAIL ABOUT MOVIE**, Director, Actor 1, Actor 2,	Actor 3, Actor 4,	votes, Gross $(18)
 
