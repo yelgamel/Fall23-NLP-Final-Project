@@ -37,11 +37,11 @@ We are using a dataset from Kaggle encompassing the 1000 top-rated movies, 1000 
 
 2- What is data format: csv, json?  The data is in three .csv files (one each for movies, TV series, and video games).
 
-3- Provide initial data description:  **NOTE THAT THE TEXT FIELD FOR NLP IS IN BOLD**  
+3- Provide initial data description:  **NOTE THAT THE TEXT FIELD FOR NLP IS IN BOLD** (and the number of blank fields, if any, are in parentheses)
 
-Movies File:  1000 records x 16 columns:  Ranking of movie, Movie name, Year, Certificate, Runtime, Genre, Rating, **DETAIL ABOUT MOVIE**, Director, Actor 1, Actor 2,	Actor 3, Actor 4,	votes, metascore,	Gross $
+Movies File:  1000 records x 16 columns:  Ranking of movie, Movie name, Year, Certificate(5), Runtime, Genre, Rating, Metascore(163), **DETAIL ABOUT MOVIE**, Director, Actor 1, Actor 2,	Actor 3, Actor 4,	votes, Gross $(18)
 
-TV Series File:  1000 records x 13 columns:  Ranking of series, Series name, Year, Certificate,	Runtime, Genre,	Rating, **DETAILS ABOUT SERIES**, Actor 1,	Actor 2, Actor 3,	Actor 4, Votes
+TV Series File:  1000 records x 13 columns:  Ranking of series, Series name, Year, Certificate(170), Runtime(25), Genre,	Rating(450), **DETAILS ABOUT SERIES(8)**, Actor 1(2),	Actor 2(2), Actor 3(6),	Actor 4(7), Votes
 
 Video Game File:  250 records x 12 columns:  Video game name,	Year,	Genre, Rating, **DETAILS ABOUT GAME**, Director, Actor 1,	Actor 2, Actor 3,	Actor 4, Votes, Certificate
 
