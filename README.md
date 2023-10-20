@@ -38,14 +38,14 @@ We are using a dataset from Kaggle encompassing the 1000 top-rated movies, 1000 
 2- What is data format: csv, json?  The data is in three .csv files (one each for movies, TV series, and video games).
 
 3- Provide initial data description:  **NOTE THAT THE TEXT FIELD FOR NLP IS IN BOLD**  
+
 Movies File:  1000 records x 16 columns:  Ranking of movie, Movie name, Year, Certificate, Runtime, Genre, Rating, **DETAIL ABOUT MOVIE**, Director, Actor 1, Actor 2,	Actor 3, Actor 4,	votes, metascore,	Gross $
+
 TV Series File:  1000 records x 13 columns:  Ranking of series, Series name, Year, Certificate,	Runtime, Genre,	Rating, **DETAILS ABOUT SERIES**, Actor 1,	Actor 2, Actor 3,	Actor 4, Votes
+
 Video Game File:  250 records x 12 columns:  Video game name,	Year,	Genre, Rating, **DETAILS ABOUT GAME**, Director, Actor 1,	Actor 2, Actor 3,	Actor 4, Votes, Certificate
-![image](https://github.com/yelgamel/Fall23-NLP-Final-Project/assets/147782148/829e8925-dbd3-4e3c-825e-1c9b88124267)
 
-![image](https://github.com/yelgamel/Fall23-NLP-Final-Project/assets/147782148/7b865e99-d3c3-45e6-8de4-0a642ec671b6)
 
-![image](https://github.com/yelgamel/Fall23-NLP-Final-Project/assets/147782148/c572e012-4059-4395-9109-a9d644b6c850)
 
 - Besides a text field, what other information do you have
   (for example, review data -> location, stars, users; twitter data -> user, likes;...)
