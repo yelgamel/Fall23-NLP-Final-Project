@@ -47,7 +47,12 @@ If so, what are they and how is yours different? Which user group/stakeholders i
 Describe tentatively what tasks your application will perform. There are two types of functions you would need to offer:
 - NLP Functions: specific to your NLP tasks
 - User Interaction: For example, allowing users to select/filter/search 
-      
+
+This application will provide two groups of functions through a REST API: NLP tasks and user interactions. 
+
+1- Users can perform NLP tasks such as text normalization, lemmatization, and stop word removal. The user can also get recommendations for the chosen category. 
+2- User interactions include retrieving categories or items within a category, as well as details about recommended items.
+
       
 #### •	Communication and Sharing: ---- (Completed by Yasmin Elgamel)
 
