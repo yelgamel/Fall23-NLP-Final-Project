@@ -65,7 +65,7 @@ Describe tentatively what tasks your application will perform. There are two typ
 
 
 ### 4. Personal Contribution Statement: ---- (Each team member will complete this part separately)
-- This part will be completed by each team member as part of the proposal and submitted on Canvas.
+- This part will be completed by each team member as part of the proposal and submit it on Canvas.
 
 --------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------
