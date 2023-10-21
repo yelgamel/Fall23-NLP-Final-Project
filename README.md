@@ -1,6 +1,6 @@
 # Group 5 - NLP Final Project
 
-### 1.	Project Title: Movie Recommendation Web Application
+### 1.	Project Title: Entertainment Recommendation Web Application
 
 ### 2.	Team Names: Group 5 - Carl Cruzan, Maciel Lopez, and Yasmin Elgamel
 
@@ -10,10 +10,10 @@
 #### •	Objectives: ---- (Completed by Yasmin Elgamel)
 State as clearly as possible what you want to do. What problem do you solve etc?
 
-- The team will create a web application using Flask that will allow the user to enter a title of a movie that they like, and receive a recommendation for ten movies that are similar to their interest.
-- If the user enters a title that is not in the database, the web application will display a message asking the user to enter the correct movie title.
-- If the database has close matches to the user’s input, the web application will suggest a title with a closer match to the user’s input, and display recommendation for ten movies.
-- We will use NLP features to lower characters, remove special characters and whitespaces, tokenize, and remove stop words. Then, cosine similarity will be added in order to find similar movies that will match the user’s interest and preference.
+- The team will create a web application using Flask that will allow the user to enter a title of a movie, TV series, or video game that they like, and receive recommendation based on their interest.
+- If the user enters a title that is not in the database, the web application will display a message asking the user to enter the correct title.
+- If the database has close matches to the user’s input, the web application will suggest a title with a closer match to the user’s input, and display recommendation.
+- We will use NLP features to lower characters, remove special characters and whitespaces, tokenize, and remove stop words. Then, cosine similarity will be added in order to find similar titles that will match the user’s interest and preference.
 
 
 #### •	Usefulness: ---- (Completed by Yasmin Elgamel)
@@ -21,11 +21,11 @@ State as clearly as possible why your chosen application is useful.
 Make sure to answer the following questions: Are there any similar or equivalent applications out here? 
 If so, what are they and how is yours different? Which user group/stakeholders is your application targeting?
 
-- This application will be useful for companies like Netflix, Amazon, Disney, and all television studios. It will help businesses understand the user’s interest and tailor their products based on their customers’ needs. This will help them increase profit and productivity.
-- This application can also be helpful in theatres, so customers can find out if the new movie will match their preference before buying a ticket.
-- In addition, from the user’s side, this application will be helpful and save lots of time for the user. They can easily and quickly find movies similar to what they like. It will also save them money, because users will buy movies they know they will enjoy.
-- Netflix uses movie recommendation system; however, they use the user’s watch history to recommend movies. Our movie recommendation system is different, because it allows the customer to enter a title of a movie they like. Personally, I believe that using the watch history is not always effective, because most of the time I would start watching a movie and after twenty minutes I decide that I don’t like it. Then, Netflix fills the front page of my account with movies similar to the one I disliked. It is always effective to ask the person directly about what they like to achieve the most accurate movie recommendation system.
-- Our application is targeting anyone who enjoys watching movies, and all businesses that create and/or sell movies.
+- This application will be useful for companies like Netflix, Amazon, Disney, and all television studios, and video game companies. It will help businesses understand the user’s interest and tailor their products based on their customers’ needs. This will help them increase profit and productivity.
+- This application can also be helpful in theatres, so customers can find out if the new movie or TV series will match their preference before buying a ticket.
+- In addition, this application will be helpful and save lots of time for the user. They can easily and quickly find the entertainment of their choice. It will also save money for the users.
+- Netflix and video game companies use recommendation systems; however, they use the user’s history to recommend movies. Our Entertainment Recommendation System is different, because it directly asks the users for their preferred titles. Personally, I believe that using the user’s history is not always effective. For example, most of the time I would start watching a movie and after twenty minutes I decide that I don’t like it. Then, Netflix fills the front page of my account with movies similar to the one I disliked. It is always effective to ask the person directly about what they like to achieve the most accurate recommendation results.
+- Our application is targeting anyone who enjoys video games, and likes watching movies and TV series. It also targets all businesses that create and/or sell movies, TV series, and video games.
 
 
 
