@@ -58,12 +58,12 @@ Describe tentatively what tasks your application will perform. There are two typ
 
 This application will provide two groups of functions through a REST API: NLP tasks and user interactions. 
 
-1. Users can perform NLP tasks such as text normalization, lemmatization, and stop word removal. The user can also get recommendations from a chosen category, such as movies, or a mixture categories. Recommendations can be filtered by the number of recommendations desired or by applicable fields such as genre, year, ranking, rating, runtime, or number of votes.
-2. User interactions include retrieving information about the dataset. These can be categories, such as movie, television show, or video game, or details about a specific item like the runtime of a movie.
+1. Users can perform NLP tasks such as text normalization, lemmatization, and stop word removal. The user can also get content-based recommendations from a chosen category, such as movies, or a mixture categories by providing the title of a movie, tv show, or video game. Recommendations can be filtered by the number of recommendations desired or by applicable fields such as genre, year, ranking, rating, runtime, or number of votes. The user will be able to choose the similarity metric used to recommend content.
+2. User interactions include retrieving information about the dataset. These can be categories, such as movie, television show, or video game, or details about a specific item like the runtime of a movie or the genre.
 
-On failure, users should receive appropriate errors.
+On failure, users should receive appropriate errors. 
 
-Below is an example API described with the OpenAPI specification.
+Below is an example API described with the OpenAPI specification. Potential API endpoints are '/recommendations' and '/data'. '/recommendations' will accept GET requests. Users query this endpoint, directly or through a website, to receive recommendations. '/data' can be accessed through GET requests to provide information about known content in the dataset.
 
 ```
 openapi: 3.0.3
