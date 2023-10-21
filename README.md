@@ -1,6 +1,6 @@
 # Group 5 - NLP Final Project
 
-### 1.	Project Title: Entertainment Recommendation Web Application
+### 1.	Project Title: Entertainment Recommendation Web Application 
 
 ### 2.	Team Names: Group 5 - Carl Cruzan, Maciel Lopez, and Yasmin Elgamel
 
