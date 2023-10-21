@@ -4,7 +4,7 @@
 
 ### 2.	Team Names: Group 5 - Carl Cruzan, Maciel Lopez, and Yasmin Elgamel
 
-### 3.	Project Description
+### 3.	Project Description 
 
 
 #### •	Objectives: ---- (Completed by Yasmin Elgamel)
