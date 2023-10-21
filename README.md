@@ -31,13 +31,13 @@ If so, what are they and how is yours different? Which user group/stakeholders i
 
 #### •	Data: ---- (Completed by Carl Cruzan)
 
-1- Describe dataset origin (who collected, when, and for what purpose): https://www.kaggle.com/datasets/ramjasmaurya/top-250s-in-imdb/data?select=imdb+%281000+tv+series%29+-+%28june+2022%29.csv
+1. Describe dataset origin (who collected, when, and for what purpose): https://www.kaggle.com/datasets/ramjasmaurya/top-250s-in-imdb/data?select=imdb+%281000+tv+series%29+-+%28june+2022%29.csv
 
 We are using a dataset from Kaggle encompassing the 1000 top-rated movies, 1000 top-rated TV series and 250 top-rated video games.  The dataset was pulled from IMDb as of June 2022 by Ram Jas.  The purpose of the dataset is for general use by those who have an interest in the topic and/or those interested in creating a project with the data.   
 
-2- The data is in three .csv files (one each for movies, TV series, and video games).
+2. The data is in three .csv files (one each for movies, TV series, and video games).
 
-3- The three files are desribed below:  **NOTE THAT THE TEXT FIELD FOR NLP IS IN BOLD** (and the number of blank fields, if any, are in parentheses)
+3. The three files are desribed below:  **NOTE THAT THE TEXT FIELD FOR NLP IS IN BOLD** (and the number of blank fields, if any, are in parentheses)
 
 Movies File:  1000 records x 16 columns:  Ranking of movie, Movie name, Year, Certificate(5), Runtime, Genre, Rating, Metascore(163), **DETAIL ABOUT MOVIE**, Director, Actor 1, Actor 2,	Actor 3, Actor 4,	votes, Gross $(18)
 
@@ -55,8 +55,70 @@ For some of the blank fields, we may fill using other information:  for example,
 Describe tentatively what tasks your application will perform. There are two types of functions you would need to offer:
 - NLP Functions: specific to your NLP tasks
 - User Interaction: For example, allowing users to select/filter/search 
-      
-      
+
+This application will provide two groups of functions through a REST API: NLP tasks and user interactions. 
+
+1. Users can perform NLP tasks such as text normalization, lemmatization, and stop word removal. The user can also get recommendations from a chosen category, such as movies, or a mixture categories. Recommendations can be filtered by the number of recommendations desired or by applicable fields such as genre, year, ranking, rating, runtime, or number of votes.
+2. User interactions include retrieving information about the dataset. These can be categories, such as movie, television show, or video game, or details about a specific item like the runtime of a movie.
+
+On failure, users should receive appropriate errors.
+
+Below is an example API described with the OpenAPI specification.
+
+```
+openapi: 3.0.3
+info:
+  title: Entertainment Recommendation Engine
+  description: |-
+    Example description.
+  version: 1.0.0
+servers:
+  - url: localhost
+tags:
+  - name: nlp
+    description: NLP functions
+  - name: user
+    description: User interactions
+paths:
+  /recommendations:
+    get:
+      tags:
+        - nlp
+      summary: Get a recommendation
+      description: Get recommendation
+      responses:
+        default:
+          description: Successful operation
+  /data/movies:
+    get:
+      tags:
+        - user
+      summary: Get a list of movies
+      description: Get movies
+      responses:
+        default:
+          description: successful operation
+  /data/tv-shows:
+    get:
+      tags:
+        - user
+      summary: Get a list of television shows
+      description: Get television shows
+      responses:
+        default:
+          description: successful operation
+  /data/video-games:
+    get:
+      tags:
+        - user
+      summary: Get a list of video games
+      description: Get video games
+      responses:
+        default:
+          description: successful operation
+```
+
+
 #### •	Communication and Sharing: ---- (Completed by Yasmin Elgamel)
 
 - Communication method: Group 5 is communicating via Teams, Canvas, and Piazza.
@@ -94,24 +156,3 @@ Describe tentatively what tasks your application will perform. There are two typ
 
 ### 10/16/2023: Note from Yasmin Elgamel:
 - I completed the following topics in this proposal: "Project Title", "Team Names"; and under "Project Description", I completed "Objectives", "Usefulness", and "Communication and Sharing" portions.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
