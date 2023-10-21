@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie Recommendation Application</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Movie Recommendation Application</h1>
+    <form action="/recommend" method="post">
+        <label for="user_input">Enter the title of your favorite movie:</label>
+        <input type="text" id="user_input" name="user_input" required>
+        <input type="submit" value="Find Ten Similar Movies">
+    </form>
+</body>
+</html>

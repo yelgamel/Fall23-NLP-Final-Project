@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recommended Movies for "{{ user_input }}"</title>
+</head>
+<body>
+    <h1>Top Ten Recommended Movies That are Similar to "{{ user_input }}"</h1>
+
+    <ul>
+        {% for movie in recommendations %}
+            <li>{{ movie }}</li>
+        {% endfor %}
+    </ul>
+
+    <a href="/">Back to Home</a>
+</body>
+</html>
