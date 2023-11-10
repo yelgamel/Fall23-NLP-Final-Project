@@ -11,90 +11,73 @@ from sklearn.metrics.pairwise import cosine_similarity
 app = Flask(__name__)
 
 
-# Load datasets
-movies = pd.read_csv('../data/movies.csv')
-movies.rename(columns=lambda x: x.strip().lower(), inplace=True)
+def process_movie_data(file_name):
+    movies = pd.read_csv(file_name, sep=',')
+    movies = movies.rename(columns=lambda x: x.strip().lower())
 
-# slice off unused columns
-movies = movies[['movie name', 'detail about movie',
-                 'year', 'runtime', 'ranking of movie',
-                 'genre', 'rating', 'votes', 'director',
-                 'actor 1', 'actor 2', 'actor 3', 'actor 4']]
+    # slice off unused columns
+    movies = movies[['movie name', 'detail about movie',
+                    'year', 'runtime', 'ranking of movie',
+                    'genre', 'rating', 'votes', 'director',
+                    'actor 1', 'actor 2', 'actor 3', 'actor 4']]
 
-# rename columns
-movies = movies.rename(columns={'movie name': 'title',
-                                'detail about movie': 'description',
-                                'ranking of movie': 'ranking',
+    # rename columns
+    movies = movies.rename(columns={'movie name': 'title',
+                                    'detail about movie': 'description',
+                                    'ranking of movie': 'ranking',
+                                    'actor 1': 'actor-1',
+                                    'actor 2': 'actor-2',
+                                    'actor 3': 'actor-3',
+                                    'actor 4': 'actor-4'})
+
+    movies.fillna('', inplace=True)
+    movies['type'] = 'movie'
+
+    return movies
+
+def process_tv_data(file_name):
+    tv_series = pd.read_csv(file_name, sep=',')
+    tv_series = tv_series.rename(columns=lambda x: x.strip().lower())
+
+    # slice off unused columns
+    tv_series = tv_series[['series name', 'details', 'year',
+                        'runtime', 'ranking',
+                        'genre', 'rating', 'votes', 'actor 1',
+                        'actor 2', 'actor 3', 'actor 4']]
+
+    # rename columns
+    tv_series = tv_series.rename(columns={
+                                'series name': 'title',
+                                'details': 'description',
                                 'actor 1': 'actor-1',
                                 'actor 2': 'actor-2',
                                 'actor 3': 'actor-3',
                                 'actor 4': 'actor-4'})
 
-movies.fillna('', inplace=True)
-movie_corpus_columns = ['title', 'director', 'actor-1', 'actor-2', 'actor-3', 'actor-4', 'description']
-movies['corpus'] = movies[movie_corpus_columns].apply(lambda x: ' '.join(x), axis=1)
+    tv_series.fillna('', inplace=True)
+    tv_series['director'] = ''
+    tv_series['type'] = 'tv series'
 
-#
-#
-#
-tv_series = pd.read_csv('../data/tv-series.csv')
-tv_series.rename(columns=lambda x: x.strip().lower(), inplace=True)
+    return tv_series
 
-tv_series = tv_series[['series name', 'details', 'year',
-                       'runtime', 'ranking',
-                       'genre', 'rating', 'votes', 'actor 1',
-                       'actor 2', 'actor 3', 'actor 4']]
+def process_video_game_data(file_name):
+    video_games = pd.read_csv(file_name, sep=',')
+    video_games = video_games.rename(columns=lambda x: x.strip().lower())
 
-tv_series = tv_series.rename(columns={
-                              'series name': 'title',
-                              'details': 'description',
-                              'actor 1': 'actor-1',
-                              'actor 2': 'actor-2',
-                              'actor 3': 'actor-3',
-                              'actor 4': 'actor-4'})
+    # slice off unused columns
+    video_games = video_games[['video game name', 'details', 'year',
+                            'ranking', 'genre', 'rating', 'votes',
+                            'director', 'actor-1', 'actor-2', 
+                            'actor-3', 'actor-4']]
 
-tv_series.fillna('', inplace=True)
+    # rename columns
+    video_games = video_games.rename(columns={'video game name': 'title',
+                                            'details': 'description'})
 
-tv_series_corpus_columns = ['title', 'actor-1', 'actor-2', 'actor-3', 'actor-4', 'description']
-tv_series['corpus'] = tv_series[tv_series_corpus_columns].apply(lambda x: ' '.join(x), axis=1)
+    video_games.fillna('', inplace=True)
+    video_games['type'] = 'video game'
 
-#
-#
-#
-video_games = pd.read_csv('../data/video-games.csv')
-video_games.rename(columns=lambda x: x.strip().lower(), inplace=True)
-
-video_games = video_games[['video game name', 'details', 'year',
-                           'ranking', 'genre', 'rating', 'votes',
-                           'director', 'actor-1', 'actor-2', 
-                           'actor-3', 'actor-4']]
-
-video_games = video_games.rename(columns={'video game name': 'title',
-                                          'details': 'description'})
-
-video_games.fillna('', inplace=True)
-
-video_games_corpus_columns = ['title', 'director', 'actor-1', 'actor-2', 'actor-3', 'actor-4', 'description']
-video_games['corpus'] = video_games[video_games_corpus_columns].apply(lambda x: ' '.join(x), axis=1)
-
-print(movies.columns)
-print(tv_series.columns)
-print(video_games.columns)
-
-raise NotImplementedError
-#
-#
-#
-
-nltk.download('wordnet')
-
-# prepare to tokenize words
-wpt = nltk.WordPunctTokenizer()
-
-# download stopwords
-nltk.download('stopwords')
-stop_words = nltk.corpus.stopwords.words('english')
-
+    return video_games
 
 # create function to normalize corpus
 def process(txt):
@@ -116,56 +99,6 @@ def process(txt):
 
     return txt
 
-
-normalize_corpus = np.vectorize(process)
-
-movie_corpus = normalize_corpus(new_movies)
-movie_corpus = pd.DataFrame(movie_corpus)
-movie_corpus.columns = ['title', 'description', 'year', 'runtime', 'ranking',
-                        'genre', 'rating', 'votes', 'director', 'Actor 1',
-                        'Actor 2', 'ACTOR 3', 'ACTOR 4']
-
-
-series_corpus = normalize_corpus(new_series)
-series_corpus = pd.DataFrame(series_corpus)
-series_corpus.columns = ['title', 'description', 'year', 'runtime', 'ranking',
-                         'genre', 'rating', 'votes', 'ACTOR 1', 'ACTOR 2',
-                         'ACTOR 3', 'ACTOR 4']
-
-
-games_corpus = normalize_corpus(new_games)
-games_corpus = pd.DataFrame(games_corpus)
-games_corpus.columns = ['title', 'description', 'year', 'ranking', 'genre',
-                        'rating', 'votes',  'DIRECTOR ', 'ACTOR-1', 'ACTOR-2',
-                        'ACTOR-3', 'ACTOR-4']
-
-#
-#
-#
-
-# Define TF-IDF vectorizers for each dataset
-tfidf_vec_movies = TfidfVectorizer()
-movies_tfidf_matrix = tfidf_vec_movies.fit_transform(
-    movie_corpus['description'])
-
-tfidf_vec_series = TfidfVectorizer()
-series_tfidf_matrix = tfidf_vec_series.fit_transform(
-    series_corpus['description'])
-
-tfidf_vec_games = TfidfVectorizer()
-games_tfidf_matrix = tfidf_vec_games.fit_transform(
-    games_corpus['description'])
-
-#
-#
-#
-
-
-@app.route('/')
-def index():
-    return render_template('index.html')
-
-
 def calculate_cosine_similarity(user_input, item_matrix, vectorizer):
     # Transform the user input
     user_input_vector = vectorizer.transform([user_input])
@@ -175,72 +108,62 @@ def calculate_cosine_similarity(user_input, item_matrix, vectorizer):
 
     return cosine_similarities
 
+# media
+movies = process_movie_data('../data/movies.csv')
+tv_series = process_tv_data('../data/tv-series.csv')
+video_games = process_video_game_data('../data/video-games.csv')
+media = pd.concat([movies, tv_series, video_games], axis=0)
+corpus_columns = ['actor-1', 'actor-2', 'actor-3', 'actor-4', 'description', 'director', 'genre', 'title']
+media['corpus'] = media[corpus_columns].apply(lambda x: ' '.join(x), axis=1)
+
+# prepare to tokenize words
+nltk.download('wordnet')
+wpt = nltk.WordPunctTokenizer()
+
+# download stopwords
+nltk.download('stopwords')
+stop_words = nltk.corpus.stopwords.words('english')
+
+media_clean = media.apply(np.vectorize(process))
+
+# Define TF-IDF vectorizers for each dataset
+tfidf_vec = TfidfVectorizer()
+tfidf_matrix = tfidf_vec.fit_transform(media_clean['corpus'])
+
+@app.route('/')
+def index():
+    return render_template('index.html')
 
 @app.route('/recommend', methods=['POST'])
 def recommend():
-    user_input = request.form.get('user_input')
-    genre = request.form.get('genre')
-    ranking = request.form.get('ranking')
-    runtime = request.form.get('runtime')
-    year = request.form.get('year')
-    rating = request.form.get('rating')
-    num_votes = request.form.get('num_votes')
-    num_recommendations = request.form.get('num_recommendations')
+    try:
+        user_input = request.form.get('user_input', default=None, type=str)
+        requested_media = request.form.getlist('media', type=str)
+        genre = request.form.get('genre')
+        ranking = request.form.get('ranking', default=None, type=float)
+        runtime = request.form.get('runtime', default=None, type=float)
+        year = request.form.get('year', default=None, type=int)
+        rating = request.form.get('rating', default=None, type=float)
+        num_votes = request.form.get('num_votes', default=None, type=int)
+        num_recommendations = request.form.get('num_recommendations', default=10, type=int)
+    except ValueError as e:
+        print("Could not process Request: ", e)
 
-    recommendations = []
+    # when list is empty, provide recommendations for all media types
+    requested_media = set(requested_media)
+    if not requested_media:
+        reqeusted_media = set("movies, tv-series, video-games")
 
     if user_input is not None:
         user_input = user_input.lower()
 
-    # Handle optional input fields
-    if not ranking:
-        ranking = np.nan
-    else:
-        ranking = float(ranking)
-
-    if not runtime:
-        runtime = np.nan
-    else:
-        runtime = float(runtime)
-
-    if not year:
-        year = np.nan 
-    else:
-        year = int(year)
-
-    if not rating:
-        rating = np.nan 
-    else:
-        rating = float(rating)
-
-    if not num_votes:
-        num_votes = np.nan
-    else:
-        num_votes = int(num_votes)
-
-    if not num_recommendations:
-        num_recommendations = 10
-    else:
-        num_recommendations = int(num_recommendations)
-
-    # Create dataframes for the selected genre
-    if genre == 'Movies':
-        item_df = new_movies
-        item_matrix = movies_tfidf_matrix
-        vectorizer = tfidf_vec_movies
-    elif genre == 'TV Series':
-        item_df = new_series
-        item_matrix = series_tfidf_matrix
-        vectorizer = tfidf_vec_series
-    elif genre == 'Video Games':
-        item_df = new_games
-        item_matrix = games_tfidf_matrix
-        vectorizer = tfidf_vec_games
+    item_matrix = tfidf_matrix
+    vectorizer = tfidf_vec
+    item_df = media
 
     if user_input is not None:
         # Calculate cosine similarity
-        cosine_similarities = calculate_cosine_similarity(
-            user_input, item_matrix, vectorizer)
+        cosine_similarities = calculate_cosine_similarity(user_input, item_matrix, vectorizer)
 
         # Get the indices of the top recommendations
         similar_indices = cosine_similarities[0].argsort()[
@@ -256,10 +179,8 @@ def recommend():
         item_df['votes'] = pd.to_numeric(
             item_df['votes'], errors='coerce')
 
-
     # Filter the data based on user preferences and remove rows with NaN values
-    if not (np.isnan(ranking) or np.isnan(year) or np.isnan(rating)
-            or np.isnan(runtime) or np.isnan(num_votes)):
+    if not ((ranking is None) or (year is None) or (rating is None) or (runtime is None) or (num_votes is None)):
         
         filtered_df = item_df[
             (item_df['ranking'] >= ranking) &
@@ -270,6 +191,7 @@ def recommend():
     else:
         filtered_df = item_df.dropna()
 
+    recommendations = []
     for index in similar_indices:
         title = item_df['title'].iloc[index]
         if title not in filtered_df['title'].values:
@@ -277,6 +199,5 @@ def recommend():
 
     return render_template('recommendations.html', recommendations=recommendations)
 
-
 if __name__ == '__main__':
-    app.run(debug=False)
+    app.run(debug=True)
