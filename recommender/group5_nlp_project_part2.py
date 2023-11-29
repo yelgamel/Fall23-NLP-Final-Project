@@ -152,7 +152,7 @@ def recommend():
     # when list is empty, provide recommendations for all media types
     requested_media = set(requested_media)
     if not requested_media:
-        reqeusted_media = set("movies, tv-series, video-games")
+        requested_media = set("movies, tv-series, video-games")
 
     if user_input is not None:
         user_input = user_input.lower()
@@ -162,12 +162,24 @@ def recommend():
     item_df = media
 
     if user_input is not None:
-        # Calculate cosine similarity
-        cosine_similarities = calculate_cosine_similarity(user_input, item_matrix, vectorizer)
+        media_titles = media['title'].str.lower()
+        if (media_titles == user_input).any():
+            idx = np.where(user_input == media_titles)[0][0]
+            user_input = media.iloc[idx]['corpus']
+        
+            # Calculate cosine similarity
+            cosine_similarities = calculate_cosine_similarity(user_input, item_matrix, vectorizer)
 
-        # Get the indices of the top recommendations
-        similar_indices = cosine_similarities[0].argsort()[
-            :-num_recommendations-1:-1]
+            # Get the indices of the top recommendations
+            similar_indices = cosine_similarities[0].argsort()[
+                -2:-num_recommendations-2:-1]
+        else:
+            # Calculate cosine similarity
+            cosine_similarities = calculate_cosine_similarity(user_input, item_matrix, vectorizer)
+
+            # Get the indices of the top recommendations
+            similar_indices = cosine_similarities[0].argsort()[
+                :-num_recommendations-1:-1]
 
         # Convert to float
         item_df['ranking'] = pd.to_numeric(
