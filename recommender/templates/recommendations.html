@@ -7,10 +7,19 @@
     <h1>Recommendations</h1>
 
     <ul>
-        {% for title in recommendations %}
-            <li>{{ title }}</li>
-        {% endfor %}
+        Getting {{ num_recommendations }} recommendations for <b>{{ title }}</b>:
     </ul>
+
+    <ol>
+        {% for title, id, type in recommendations %}
+            <li>{{ title }}
+                <ul>
+                    <li>ID: {{ id }}</li>
+                    <li>{{ type }}</li>
+                </ul>
+            </li>
+        {% endfor %}
+    </ol>
 
     <a href="/">Go back</a>
 </body>

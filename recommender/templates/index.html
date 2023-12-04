@@ -6,19 +6,20 @@
 <body>
     <h1>Recommendation System</h1>
     <form action="/recommend" method="post">
-        <label for="user_input">Enter Title:</label>
-        <input type="text" name="user_input" required><br>
+        <label for="title">Enter Title:</label>
+        <input type="text" name="title" required placeholder="The Dark Knight"><br>
 
-        <label for="media_type">Media Type:</label>
-        <select name="media_type">
-            <option value="Movies">Movies</option>
-            <option value="TV Series">TV Series</option>
-            <option value="Video Games">Video Games</option>
-        </select><br>
+        <label for="key_words">Key words:</label><br>
+        <textarea id="key_words" name="key_words" rows="4" cols="50" placeholder="Enter any other key words here..."></textarea><br>
 
-        <input type="checkbox" name="media" value="movies">Movies<br/>
-        <input type="checkbox" name="media" value="tv-series">TV Series<br/>
-        <input type="checkbox" name="media" value="video-games">Video Games<br/>
+        <label for="num_recommendations">Number of Recommendations (1-50):</label>
+        <input type="number" name="num_recommendations" min="1" max="50" step="1" placeholder="10"><br>
+        
+        <br><b>Filters:</b><br>
+        <label for="media_type">Media Type:</label><br>
+        <input type="checkbox" name="media" value="movies">Movies<br>
+        <input type="checkbox" name="media" value="tv-series">TV Series<br>
+        <input type="checkbox" name="media" value="video-games">Video Games<br>
 
         <label for="ranking">Minimum Ranking (1-10):</label>
         <input type="number" name="ranking" min="0" max="10" step="0.1"><br>
@@ -35,9 +36,7 @@
         <label for="num_votes">Minimum Number of Votes:</label>
         <input type="number" name="num_votes"><br>
 
-        <label for="num_recommendations">Number of Recommendations:</label>
-        <input type="number" name="num_recommendations"><br>
-
+        <br>
         <input type="submit" value="Recommend">
     </form>
 </body>

@@ -67,7 +67,7 @@ def process_video_game_data(file_name):
     # slice off unused columns
     video_games = video_games[['video game name', 'details', 'year',
                             'ranking', 'genre', 'rating', 'votes',
-                            'director', 'actor-1', 'actor-2', 
+                            'director', 'actor-1', 'actor-2',
                             'actor-3', 'actor-4']]
 
     # rename columns
@@ -99,12 +99,12 @@ def process(txt):
 
     return txt
 
-def calculate_cosine_similarity(user_input, item_matrix, vectorizer):
+def calculate_cosine_similarity(title, item_matrix, vectorizer):
     # Transform the user input
-    user_input_vector = vectorizer.transform([user_input])
+    title_vector = vectorizer.transform([title])
 
     # Calculate cosine similarity
-    cosine_similarities = cosine_similarity(user_input_vector, item_matrix)
+    cosine_similarities = cosine_similarity(title_vector, item_matrix)
 
     return cosine_similarities
 
@@ -137,7 +137,8 @@ def index():
 @app.route('/recommend', methods=['POST'])
 def recommend():
     try:
-        user_input = request.form.get('user_input', default=None, type=str)
+        title_orig = request.form.get('title', default=None, type=str)
+        key_words = request.form.get('key_words', default="", type=str)
         requested_media = request.form.getlist('media', type=str)
         genre = request.form.get('genre')
         ranking = request.form.get('ranking', default=None, type=float)
@@ -149,51 +150,50 @@ def recommend():
     except ValueError as e:
         print("Could not process Request: ", e)
 
-    # when list is empty, provide recommendations for all media types
-    requested_media = set(requested_media)
-    if not requested_media:
-        requested_media = set("movies, tv-series, video-games")
+    key_words = process(key_words)
 
-    if user_input is not None:
-        user_input = user_input.lower()
+    # when list is empty, provide recommendations for all media types
+    if not requested_media:
+        requested_media = ["movies", "tv-series", "video-games"]
 
     item_matrix = tfidf_matrix
     vectorizer = tfidf_vec
     item_df = media
 
-    if user_input is not None:
-        media_titles = media['title'].str.lower()
-        if (media_titles == user_input).any():
-            idx = np.where(user_input == media_titles)[0][0]
-            user_input = media.iloc[idx]['corpus']
-        
-            # Calculate cosine similarity
-            cosine_similarities = calculate_cosine_similarity(user_input, item_matrix, vectorizer)
+    title = title_orig.lower()
 
-            # Get the indices of the top recommendations
-            similar_indices = cosine_similarities[0].argsort()[
-                -2:-num_recommendations-2:-1]
-        else:
-            # Calculate cosine similarity
-            cosine_similarities = calculate_cosine_similarity(user_input, item_matrix, vectorizer)
+    media_titles = media['title'].str.lower()
+    if (media_titles == title).any():
+        idx = np.where(title == media_titles)[0][0]
+        user_data = " ".join([media.iloc[idx]['corpus'], key_words])
 
-            # Get the indices of the top recommendations
-            similar_indices = cosine_similarities[0].argsort()[
-                :-num_recommendations-1:-1]
+        # Calculate cosine similarity
+        cosine_similarities = calculate_cosine_similarity(user_data, item_matrix, vectorizer)
 
-        # Convert to float
-        item_df['ranking'] = pd.to_numeric(
-            item_df['ranking'], errors='coerce')
+        # Get the indices of the top recommendations
+        similar_indices = cosine_similarities[0].argsort()[-2:-num_recommendations-2:-1]
+    else:
+        user_data = " ".join([title, key_words])
 
-        item_df['runtime'] = pd.to_numeric(
-            item_df['runtime'], errors='coerce')
+        # Calculate cosine similarity
+        cosine_similarities = calculate_cosine_similarity(user_data, item_matrix, vectorizer)
 
-        item_df['votes'] = pd.to_numeric(
-            item_df['votes'], errors='coerce')
+        # Get the indices of the top recommendations
+        similar_indices = cosine_similarities[0].argsort()[:-num_recommendations-1:-1]
+
+    # Convert to float
+    item_df['ranking'] = pd.to_numeric(
+        item_df['ranking'], errors='coerce')
+
+    item_df['runtime'] = pd.to_numeric(
+        item_df['runtime'], errors='coerce')
+
+    item_df['votes'] = pd.to_numeric(
+        item_df['votes'], errors='coerce')
 
     # Filter the data based on user preferences and remove rows with NaN values
     if not ((ranking is None) or (year is None) or (rating is None) or (runtime is None) or (num_votes is None)):
-        
+
         filtered_df = item_df[
             (item_df['ranking'] >= ranking) &
             (item_df['runtime'] <= runtime) &
@@ -209,7 +209,20 @@ def recommend():
         if title not in filtered_df['title'].values:
             recommendations.append(title)
 
-    return render_template('recommendations.html', recommendations=recommendations)
+    enter_types = []
+    for index in similar_indices:
+        if item_df['type'].iloc[index] == 'video game':
+            enter_types.append("Video Game")
+        elif item_df['type'].iloc[index] == 'movie':
+            enter_types.append('Movie')
+        else:
+            enter_types.append('TV Series')
+
+    return render_template('recommendations.html',
+                           recommendations=zip(recommendations, similar_indices, enter_types),
+                           num_recommendations=num_recommendations,
+                           title=title_orig
+                           )
 
 if __name__ == '__main__':
     app.run(debug=True)
