@@ -17,9 +17,9 @@
         
         <br><b>Filters:</b><br>
         <label for="media_type">Media Type:</label><br>
-        <input type="checkbox" name="media" value="movies">Movies<br>
-        <input type="checkbox" name="media" value="tv-series">TV Series<br>
-        <input type="checkbox" name="media" value="video-games">Video Games<br>
+        <input type="checkbox" name="media" value="movie">Movies<br>
+        <input type="checkbox" name="media" value="tv series">TV Series<br>
+        <input type="checkbox" name="media" value="video game">Video Games<br>
 
         <label for="ranking">Minimum Ranking (1-10):</label>
         <input type="number" name="ranking" min="0" max="10" step="0.1"><br>
@@ -36,8 +36,15 @@
         <label for="num_votes">Minimum Number of Votes:</label>
         <input type="number" name="num_votes"><br>
 
-        <br>
         <input type="submit" value="Recommend">
+    </form>
+
+    <h2>Media Search</h2>
+    <form action="/search" method="get">
+        <label for="media_id">Enter Media ID:</label>
+        <input type="number" name="media_id" required placeholder="1" min="0" max="2249"><br>
+
+        <input type="submit" value="Search">
     </form>
 </body>
 </html>

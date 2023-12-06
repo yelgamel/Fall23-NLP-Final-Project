@@ -12,7 +12,7 @@
 
     <ol>
         {% for title, id, type in recommendations %}
-            <li>{{ title }}
+            <li><a href={{ url_for('search', media_id=id) }}>{{ title }}</a>
                 <ul>
                     <li>ID: {{ id }}</li>
                     <li>{{ type }}</li>
@@ -21,6 +21,11 @@
         {% endfor %}
     </ol>
 
-    <a href="/">Go back</a>
+    <button onclick="goBack()">Go Back</button>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
 </body>
 </html>
