@@ -141,9 +141,9 @@ def recommend():
         key_words = request.form.get('key_words', default="", type=str)
         requested_media = request.form.getlist('media', type=str)
         genre = request.form.get('genre')
-        ranking = request.form.get('ranking', default=None, type=float)
+        ranking = request.form.get('ranking', default=None, type=int)
         runtime = request.form.get('runtime', default=None, type=float)
-        year = request.form.get('year', default=None, type=int)
+        year = request.form.get('year', default=None, type=str)
         rating = request.form.get('rating', default=None, type=float)
         num_votes = request.form.get('num_votes', default=None, type=int)
         num_recommendations = request.form.get('num_recommendations', default=10, type=int)
@@ -181,28 +181,6 @@ def recommend():
         # Get the indices of the top recommendations
         similar_indices = cosine_similarities[0].argsort()[::-1]
 
-    # # Convert to float
-    # item_df['ranking'] = pd.to_numeric(
-    #     item_df['ranking'], errors='coerce')
-
-    # item_df['runtime'] = pd.to_numeric(
-    #     item_df['runtime'], errors='coerce')
-
-    # item_df['votes'] = pd.to_numeric(
-    #     item_df['votes'], errors='coerce')
-
-    # # Filter the data based on user preferences and remove rows with NaN values
-    # if not ((ranking is None) or (year is None) or (rating is None) or (runtime is None) or (num_votes is None)):
-
-    #     filtered_df = item_df[
-    #         (item_df['ranking'] >= ranking) &
-    #         (item_df['runtime'] <= runtime) &
-    #         (item_df['year'] == year) &
-    #         (item_df['rating'] >= rating) &
-    #         (item_df['votes'] >= num_votes)].dropna()
-    # else:
-    #     filtered_df = item_df.dropna()
-
     recommendations = []
     ids = []
     media_types = []
@@ -210,11 +188,52 @@ def recommend():
         if len(recommendations) >= num_recommendations:
             break
 
-        title = item_df['title'].iloc[index]
+        item_title = item_df['title'].iloc[index]
         media_type = item_df['type'].iloc[index]
+        item_year = item_df['year'].iloc[index]
+        try:
+            item_votes = item_df['votes'].iloc[index]
+            if type(item_votes) == str:
+                item_votes = item_votes.replace(',', '')
+            item_votes = int(item_votes)
+        except Exception as e:
+            item_votes = None
+
+        try:
+            item_rating = float(item_df['rating'].iloc[index])
+        except Exception as e:
+            item_rating = None
+
+        try:
+            item_ranking = int(item_df['ranking'].iloc[index])
+        except Exception as e:
+            item_ranking = None
+
+        try:
+            item_runtime = item_df['runtime'].iloc[index]
+            if type(item_runtime) == str:
+                item_runtime = ''.join(c for c in item_runtime if c in string.digits)
+            item_runtime = int(item_runtime)
+        except Exception as e:
+            item_runtime = None
+
+        if item_year and year not in item_year:
+            continue
+
+        if item_ranking and ranking and item_ranking > ranking:
+            continue
+
+        if item_votes and num_votes and item_votes <= num_votes:
+            continue
+    
+        if item_rating and rating and item_rating <= rating:
+            continue
+    
+        if item_runtime and runtime and item_runtime > runtime:
+            continue
 
         if media_type in requested_media:
-            recommendations.append(title)
+            recommendations.append(item_title)
             ids.append(index)
             if item_df['type'].iloc[index] == 'video game':
                 media_types.append("Video Game")
@@ -247,7 +266,11 @@ def search():
     director = item_df['director'].iloc[media_id]
     description = item_df['description'].iloc[media_id]
     genre = item_df['genre'].iloc[media_id]
-
+    ranking = item_df['ranking'].iloc[media_id]
+    year = item_df['year'].iloc[media_id]
+    votes = item_df['votes'].iloc[media_id]
+    rating = item_df['rating'].iloc[media_id]
+    runtime = item_df['runtime'].iloc[media_id]
 
     return render_template(
         'search.html',
@@ -256,7 +279,12 @@ def search():
         actors=actors,
         director=director,
         description=description,
-        genre=genre
+        genre=genre,
+        ranking=ranking,
+        year=year,
+        votes=votes,
+        rating=rating,
+        runtime=runtime
     )
 
 if __name__ == '__main__':
